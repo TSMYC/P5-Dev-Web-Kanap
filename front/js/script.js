@@ -1,3 +1,4 @@
+//Faire un fetch get 
 fetch("http://localhost:3000/api/products")
     .then(function(res) {
         if(res.ok) {
@@ -12,7 +13,7 @@ fetch("http://localhost:3000/api/products")
     .catch(function(err){
         console.log(err);
     })
-
+//Insertion des produits et de leurs informations
 function insertProduct(value){
     let elt = document.getElementById('items');
     for (let variable of value) { 
