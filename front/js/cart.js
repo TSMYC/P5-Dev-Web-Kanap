@@ -250,7 +250,7 @@ commande.addEventListener('click', function(){
       //Réccuperer les informations client et les id des produits dans un objet "order"
       let order={
         contact: informationsClient,
-        Id: produitID
+        products: produitID
       }
       console.log("order", order); //Afficher l'objet "order"
 
@@ -271,7 +271,7 @@ commande.addEventListener('click', function(){
       .then(function(value) {
         console.log(value);
         //Rediriger vers la page confirmation
-        document.location = `confirmation.html?id=${order.Id}`;
+        document.location = `confirmation.html?id=${value.orderId}`;
         localStorage.removeItem('panier'); // supression du panier dans le localstorage
       })
       .catch(function(err){
